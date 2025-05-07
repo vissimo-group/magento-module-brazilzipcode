@@ -3,7 +3,7 @@
 namespace MageDev\BrazilZipCode\Gateway;
 
 use MageDev\BrazilZipCode\Helper\Config;
-use Zend\Http\Client;
+use Laminas\Http\Client;
 
 /**
  * Class AbstractRequest
@@ -35,7 +35,7 @@ abstract class AbstractRequest
      * @param string $rawBody
      * @param bool $isJson
      * @param null|string $apiKey
-     * @return \Zend\Http\Response
+     * @return \Laminas\Http\Response
      */
     protected function post($uri, $rawBody, $isJson = false, $apiKey = null)
     {
@@ -56,7 +56,7 @@ abstract class AbstractRequest
      * @param bool $isJson
      * @param array $parameters
      * @param null|string $apiKey
-     * @return \Zend\Http\Response
+     * @return \Laminas\Http\Response
      */
     protected function get($uri, $isJson = false, $parameters = [], $apiKey = null)
     {
